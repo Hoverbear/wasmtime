@@ -143,6 +143,7 @@ mod test {
         // Set all the x64 flags to make sure they work
         let command = CompileCommand::from_iter_safe(vec![
             "compile",
+            "--disable-cache",
             "--disable-logging",
             "--cranelift-enable",
             "has_sse3",
@@ -193,6 +194,7 @@ mod test {
         let command = CompileCommand::from_iter_safe(vec![
             "compile",
             "--disable-logging",
+            "--disable-cache",
             "--cranelift-enable",
             "has_lse",
             "-o",
@@ -254,6 +256,7 @@ mod test {
             let command = CompileCommand::from_iter_safe(vec![
                 "compile",
                 "--disable-logging",
+                "--disable-cache",
                 "--cranelift-enable",
                 preset,
                 "-o",
